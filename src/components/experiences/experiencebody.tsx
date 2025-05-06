@@ -1,12 +1,9 @@
 import { FC } from "react";
-import { Card } from "../ui/card";
 import OneLogic from "./onlogic";
 import Minarm from "./etna";
 import Seeqle from "./seeqle";
 
-interface ExperienceProps {}
-
-const Experience: FC<ExperienceProps> = () => {
+const Experience: FC = () => {
   return (
     <div className="flex h-screen w-full items-center justify-center relative pt-20">
 

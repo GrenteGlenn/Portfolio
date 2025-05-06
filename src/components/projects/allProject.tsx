@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -63,13 +64,15 @@ const AllProject: FC = () => {
             className="block"
           >
             <CardContent className="flex flex-col justify-center items-center p-4 h-60 ">
-              <img
+              <Image
                 src={image}
                 alt={alt}
+                width={160} 
+                height={160}
                 className={`rounded-xl ${
-                  alt === "Wonders"
-                    ? "h-40 w-40 bg-gray-800 p-2"
-                    : alt === "Weather" || alt === "Pictionis"
+                  alt === "Wonders" ? "bg-gray-800 p-2" : ""
+                } ${
+                  alt === "Wonders" || alt === "Weather" || alt === "Pictionis"
                     ? "h-40 w-40"
                     : "h-38 w-60"
                 }`}

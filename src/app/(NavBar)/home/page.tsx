@@ -1,16 +1,15 @@
 "use client";
 
 import ExperienceTabs from "@/src/components/experiences/expriences";
-import { useActiveSection } from "@/src/hooks/useActiveSection";
 import { FC, useEffect, useState } from "react";
 import AllProject from "@/src/components/projects/allProject";
 import Contact from "@/src/components/contact/contact";
 import AboutMe from "@/src/components/about/about";
 import Navbar from "@/src/components/navBar/navBar";
- 
+import Image from "next/image";
+
+const sections = ["Accueil", "A propos", "Experiences", "Projets", "Contact"];
 const HomePage: FC = () => {
-  const sections = ["Accueil", "A propos", "Experiences", "Projets", "Contact"];
-  const active = useActiveSection(sections);
   const [activeSection, setActiveSection] = useState("Accueil");
 
   useEffect(() => {
@@ -27,14 +26,14 @@ const HomePage: FC = () => {
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
+      
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [ activeSection]);
 
   return (
     <main className="scroll-smooth">
-      
       <Navbar />
       {/* SECTION HERO */}
       <section
@@ -44,7 +43,7 @@ const HomePage: FC = () => {
         {/* Texte à gauche */}
         <div className="md:w-3/2 text-center md:text-left mt-10 md:mt-0">
           <span className="text-lg text-gray-600 block">
-            Bonjour, je m'appelle
+            Bonjour, je m&apos;appelle
           </span>
 
           <h1 className="text-5xl font-extrabold text-gray-900 mt-2">
@@ -68,9 +67,11 @@ const HomePage: FC = () => {
 
         {/* Image à droite */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
-          <img
+          <Image
             src="/images/photo.jpeg"
             alt="Glenn Grente"
+            width={256}
+            height={256}
             className="w-64 h-64 object-cover rounded-full shadow-lg"
           />
         </div>

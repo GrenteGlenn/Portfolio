@@ -1,20 +1,19 @@
 import { Plus } from "lucide-react";
 import { FC } from "react";
 
-interface EtnaProps {}
 
-const Etna: FC<EtnaProps> = () => {
+const Etna: FC = () => {
   return (
     <div>
-      <span className="font-bold">Octobre 2022 - Aujourd'hui </span>
+      <span className="font-bold">Octobre 2022 - Aujourd&apos;hui </span>
       <br />
       <br />
       <span>
-        L'Etna est une ecole d'informatique ou j'ai effectué ma reconversion
-        professionnelle, elle m'as permit d'apprendre le développement web entre
-        autres et m'as permit d'en faire un passion. Au sein de cette école j'ai
-        appis diverses technologies grâce à divers projets ce qui m'a permit
-        d'obtenir des compétences dans ces languages et framework associés:
+        L&apos;Etna est une ecole d&apos;informatique ou j&apos;ai effectué ma reconversion
+        professionnelle, elle m&apos;as permit d&apos;apprendre le développement web entre
+        autres et m&apos;as permit d&apos;en faire un passion. Au sein de cette école j&apos;ai
+        appis diverses technologies grâce à divers projets ce qui m&apos;a permit
+        d&apos;obtenir des compétences dans ces languages et framework associés:
       </span>
       <br />
       <br />

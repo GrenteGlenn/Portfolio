@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Contact from "../contact/contact";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
@@ -18,26 +19,32 @@ const Weather = () => {
       <div className="flex flex-col md:flex-row gap-4 w-full max-w-7xl">
         <div className="w-full h-full rounded-xl flex items-center justify-center bg-white">
           <Zoom>
-            <img
+            <Image
               src="/images/weather/Menu.png"
-              className="h-[600px] w-full object-contain "
-            />
+              className="h-[600px] w-full
+              object-contain "
+              alt=""
+            ></Image>
           </Zoom>
         </div>
         <div className="w-full h-full rounded-xl flex items-center justify-center bg-white">
           <Zoom>
-            <img
+            <Image
               src="/images/weather/MainPage.png"
-              className="h-[600px] w-full object-contain "
-            />
+              className="h-[600px] w-full
+              object-contain "
+              alt=""
+            ></Image>
           </Zoom>
         </div>
         <div className="w-full h-full rounded-xl flex items-center justify-center bg-white">
           <Zoom>
-            <img
+          <Image
               src="/images/weather/villeSave.png"
-              className="h-[600px] w-full object-contain "
-            />
+              className="h-[600px] w-full
+              object-contain "
+              alt=""
+            ></Image>
           </Zoom>
         </div>
       </div>
@@ -45,39 +52,39 @@ const Weather = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Dans le cadre de mon alternance, j’ai développé une application mobile
-          de météo en utilisant Flutter pour l’interface et Firebase pour la
-          gestion des données. Ce projet avait pour but d'explorer une nouvelle
+          Dans le cadre de mon alternance, j&apos;ai développé une application mobile
+          de météo en utilisant Flutter pour l&apos;interface et Firebase pour la
+          gestion des données. Ce projet avait pour but d&apos;explorer une nouvelle
           stack technique, tout en intégrant des APIs en temps réel, notamment
-          celle de OpenWeatherMap, afin d’afficher des données météorologiques
-          fiables et à jour. L’application s’inscrit dans une démarche de veille
-          technologique et m’a permis de consolider mes compétences en
+          celle de OpenWeatherMap, afin d&apos;afficher des données météorologiques
+          fiables et à jour. L&apos;application s&apos;inscrit dans une démarche de veille
+          technologique et m&apos;a permis de consolider mes compétences en
           développement mobile multiplateforme.
         </span>
         <span className="block">
-          L’interface principale de l’application offre une présentation
+          L&apos;interface principale de l&apos;application offre une présentation
           synthétique des informations clés : la ville recherchée, la date et
-          l’heure actuelles, la température, ainsi que l’état du ciel. L’accent
+          l&apos;heure actuelles, la température, ainsi que l&apos;état du ciel. L&apos;accent
           a été mis sur la simplicité et la clarté des données affichées, avec
-          une approche visuelle adaptée aux usages mobiles. L’expérience
+          une approche visuelle adaptée aux usages mobiles. L&apos;expérience
           utilisateur est immédiate, fluide et orientée vers la compréhension
-          rapide de la météo en un coup d’œil.
+          rapide de la météo en un coup d&apos;œil.
         </span>
         <span className="block">
-          Un menu latéral permet à l’utilisateur de personnaliser son expérience
+          Un menu latéral permet à l&apos;utilisateur de personnaliser son expérience
           : il peut basculer entre Celsius et Fahrenheit, activer un mode sombre
           adapté aux daltoniens, ou accéder rapidement aux paramètres de
-          l’application. Le design a été pensé de façon minimaliste, pour
-          s’intégrer harmonieusement aux habitudes des utilisateurs tout en
+          l&apos;application. Le design a été pensé de façon minimaliste, pour
+          s&apos;intégrer harmonieusement aux habitudes des utilisateurs tout en
           restant accessible.
         </span>
         <span className="block">
-          Enfin, l'application mémorise localement les villes consultées
-          récemment, permettant à l’utilisateur de retrouver ses recherches sans
+          Enfin, l&apos;application mémorise localement les villes consultées
+          récemment, permettant à l&apos;utilisateur de retrouver ses recherches sans
           effort. Un bouton dédié permet de supprimer une ville de la liste,
-          rendant l’interface plus propre et personnalisable. Ce projet a
-          représenté une belle opportunité de sortir de l’écosystème web
-          classique pour m’initier efficacement au développement mobile moderne.
+          rendant l&apos;interface plus propre et personnalisable. Ce projet a
+          représenté une belle opportunité de sortir de l&apos;écosystème web
+          classique pour m&apos;initier efficacement au développement mobile moderne.
         </span>
       </div>
 

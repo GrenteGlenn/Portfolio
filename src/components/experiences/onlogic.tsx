@@ -1,9 +1,8 @@
 import { Plus } from "lucide-react";
 import { FC } from "react";
 
-interface OneLogicProps {}
 
-const OneLogic: FC<OneLogicProps> = () => {
+const OneLogic: FC = () => {
   return (
     <div>
       <span className="font-bold">Mars 2023 - Janvier 2024 </span>
@@ -17,7 +16,7 @@ const OneLogic: FC<OneLogicProps> = () => {
         produits phares, on trouve des outils de supervision à distance des
         dispositifs comme les systèmes de visioconférence et de partage d’écran.
         L’entreprise mise sur la maintenance prédictive, la réduction des
-        déplacements techniques et l’efficacité énergétique. J'ai pu travailler
+        déplacements techniques et l’efficacité énergétique. J&apos;ai pu travailler
         sur la plateforme Visiologic et leur site web avec les technologies
         suivantes :
       </span>

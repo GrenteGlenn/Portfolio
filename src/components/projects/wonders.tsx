@@ -4,6 +4,7 @@ import { useState } from "react";
 import Contact from "../contact/contact";
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import Image from "next/image";
 
 const images = [
   "/images/wonders/homepage.png",
@@ -39,7 +40,7 @@ const Wonders = () => {
       <div className="relative w-full max-w-7xl">
         <div className="w-full aspect-[16/9] sm:aspect-[3/2] lg:aspect-[4/2] overflow-hidden border border-cyan-400 shadow-lg rounded-xl bg-white flex items-center justify-center">
           <Zoom>
-            <img
+            <Image
               src={images[currentIndex]}
               alt={`Slide ${currentIndex}`}
               className="object-contain w-full h-full"

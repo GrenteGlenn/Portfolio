@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "fetch-piloty-jobs": "ts-node scripts/fetch-jobs.ts"
   },

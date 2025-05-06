@@ -1,19 +1,17 @@
-import { div } from "framer-motion/client";
 import { Plus } from "lucide-react";
 import { FC } from "react";
 
-interface SeeqleProps {}
 
-const Seeqle: FC<SeeqleProps> = () => {
+const Seeqle: FC = () => {
   return (
     <div>
-      <span className="font-bold">Janvier 2024 - Aujourd'hui </span>
+      <span className="font-bold">Janvier 2024 - Aujourd&apos;hui </span>
       <br />
       <br />
       <span>
         Seeqle est une entreprise spécialisée dans le recrutement programmatique
         intelligent, combinant IA et marketing digital pour diffuser des offres
-        d’emploi ciblées. J'ai pu travailler sur la plateforme ProSeeqle avec
+        d’emploi ciblées. J&apos;ai pu travailler sur la plateforme ProSeeqle avec
         les technologies suivantes :
       </span>
       <br />

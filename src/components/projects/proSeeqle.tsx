@@ -3,6 +3,7 @@ import { useState } from "react";
 import Contact from "../contact/contact";
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import Image from "next/image";
 
 const images = [
   "/images/seeqle/Dashboard2.png",
@@ -42,7 +43,7 @@ const ProSeeqle = () => {
       <div className="relative flex items-center justify-center w-full max-w-7xl">
         <div className="w-full h-full overflow-hidden border border-cyan-400 shadow-lg rounded-xl flex items-center justify-center bg-white">
           <Zoom>
-            <img
+            <Image
               src={images[currentIndex]}
               alt={`Slide ${currentIndex}`}
               className="object-contain w-full h-full"
@@ -82,31 +83,31 @@ const ProSeeqle = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Au sein de l’entreprise Seeqle, j’ai participé à la refonte complète
+          Au sein de l&apos;entreprise Seeqle, j&apos;ai participé à la refonte complète
           de la plateforme ProSeeqle, une solution de recrutement basée sur
-          l’intelligence artificielle. Cette plateforme met en relation des
+          l&apos;intelligence artificielle. Cette plateforme met en relation des
           entreprises avec des candidats qualifiés, en leur proposant des offres
-          d’emploi adaptées à leurs compétences. Mon rôle a été de réécrire
-          toute l’application — initialement développée sous Angular — en
+          d&apos;emploi adaptées à leurs compétences. Mon rôle a été de réécrire
+          toute l&apos;application — initialement développée sous Angular — en
           utilisant React et Next.js, avec une attention particulière portée à
-          la performance, la maintenabilité et l’UX/UI, afin de proposer une
+          la performance, la maintenabilité et l&apos;UX/UI, afin de proposer une
           expérience fluide et moderne.
         </span>
         <span className="block">
           La nouvelle version de la plateforme inclut un dashboard centralisé,
           conçu pour offrir une visualisation claire et intuitive du suivi de
-          campagnes de recrutement. Il permet aux recruteurs d’accéder à
+          campagnes de recrutement. Il permet aux recruteurs d&apos;accéder à
           diverses statistiques en temps réel, telles que le nombre de
-          candidatures reçues, l’évolution des campagnes sur plusieurs
-          semaines/mois, et la qualification des profils. L’objectif était de
+          candidatures reçues, l&apos;évolution des campagnes sur plusieurs
+          semaines/mois, et la qualification des profils. L&apos;objectif était de
           rendre les données lisibles et directement exploitables via une
           interface structurée.
         </span>
         <span className="block">
-          L’un des piliers de ProSeeqle est le module de création de campagnes
-          de recrutement. L'utilisateur peut générer une campagne en quelques
-          clics, en définissant les critères importants (secteur d'activité,
-          localisation, âge, etc.). Un système d’audiences intelligentes,
+          L&apos;un des piliers de ProSeeqle est le module de création de campagnes
+          de recrutement. L&apos;utilisateur peut générer une campagne en quelques
+          clics, en définissant les critères importants (secteur d&apos;activité,
+          localisation, âge, etc.). Un système d&apos;audiences intelligentes,
           constitué de plus de 5000 profils métiers, permet de cibler très
           précisément les candidats.
         </span>
@@ -114,17 +115,17 @@ const ProSeeqle = () => {
           Une attention particulière a été portée à la gestion du budget
           publicitaire, réparti entre plusieurs réseaux sociaux (LinkedIn,
           Facebook, Instagram, Twitter, TikTok). Les recruteurs peuvent définir
-          manuellement un budget ou laisser un algorithme basé sur l’IA en
+          manuellement un budget ou laisser un algorithme basé sur l&apos;IA en
           optimisant la répartition selon les performances attendues. Le visuel
           des campagnes peut également être configuré (médias, textes, preview)
-          pour s’adapter à chaque plateforme.
+          pour s&apos;adapter à chaque plateforme.
         </span>
         <span className="block">
-          Grâce à l’intégration d’OpenAI, la plateforme permet de générer
+          Grâce à l&apos;intégration d&apos;OpenAI, la plateforme permet de générer
           automatiquement des textes de recrutement cohérents et ciblés, en
-          fonction des informations saisies par l'utilisateur. Une interface
+          fonction des informations saisies par l&apos;utilisateur. Une interface
           permet de visualiser des previews de chaque annonce, réseau par
-          réseau, et d’apporter des modifications en temps réel avant la mise en
+          réseau, et d&apos;apporter des modifications en temps réel avant la mise en
           ligne.
         </span>
         <span className="block">

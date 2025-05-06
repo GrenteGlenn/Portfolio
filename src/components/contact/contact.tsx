@@ -116,7 +116,7 @@ const Contact: FC = () => {
           )}
           {success === false && (
             <p className="text-red-600 text-center">
-              Échec de l'envoi. Réessayez plus tard.
+              Échec de l&apos;envoi. Réessayez plus tard.
             </p>
           )}
         </form>
