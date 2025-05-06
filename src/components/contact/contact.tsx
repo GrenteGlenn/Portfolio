@@ -54,7 +54,7 @@ const Contact: FC = () => {
         <form onSubmit={handleSubmit} className="space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-black mb-1">
                 Nom
               </label>
               <input
@@ -64,12 +64,12 @@ const Contact: FC = () => {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-blue-500 focus:outline-none focus:border-blue-500 transition"
+                className="w-full border-b bg-[#FAF3E0] border-blue-500 focus:outline-none focus:border-blue-500 transition"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-black mb-1">
                 Adresse Email
               </label>
               <input
@@ -79,13 +79,13 @@ const Contact: FC = () => {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="w-full border-b border-blue-500 focus:outline-none focus:border-blue-500 transition"
+                className="w-full border-b bg-[#FAF3E0] border-blue-500 focus:outline-none focus:border-blue-500 transition"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-black mb-1">
               Message
             </label>
             <textarea
@@ -95,7 +95,7 @@ const Contact: FC = () => {
               onChange={handleChange}
               placeholder="Entrer votre message"
               required
-              className="w-full border-b border-blue-500 focus:outline-none focus:border-blue-500 transition resize-none"
+              className="w-full border-b bg-[#FAF3E0] border-blue-500 focus:outline-none focus:border-blue-500 transition resize-none"
             />
           </div>
 

@@ -68,10 +68,10 @@ const AllProject: FC = () => {
                 alt={alt}
                 className={`rounded-xl ${
                   alt === "Wonders"
-                    ? "h-32 w-40 bg-gray-800 p-2"
+                    ? "h-40 w-40 bg-gray-800 p-2"
                     : alt === "Weather" || alt === "Pictionis"
-                    ? "h-32 w-40"
-                    : "h-20 w-60"
+                    ? "h-40 w-40"
+                    : "h-38 w-60"
                 }`}
               />
             </CardContent>

@@ -84,7 +84,7 @@ const HomePage: FC = () => {
       </section>
 
       {/* SECTION EXPÉRIENCE */}
-      <section id="Experiences" className="min-h-96 px-6 py-20 bg-white">
+      <section id="Experiences" className="min-h-96 px-6 py-20 bg-[#FAF3E0]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">
             Expériences
@@ -97,7 +97,7 @@ const HomePage: FC = () => {
       </section>
 
       {/* SECTION PROJETS */}
-      <section id="Projets" className="min-h-96 px-6 py-20 bg-[#FAF3E0]">
+      <section id="Projets" className="min-h-96 px-6 py-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">Projets</h2>
           {/* Composant projets ici */}
@@ -108,7 +108,7 @@ const HomePage: FC = () => {
       </section>
 
       {/* SECTION CONTACT */}
-      <section id="Contact" className="min-h-96 px-6 py-10 bg-gray-50">
+      <section id="Contact" className="min-h-96 px-6 py-10 bg-[#FAF3E0]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">Contact</h2>
           <span className="text-gray-600 mb-4">
