@@ -5,17 +5,7 @@ import "react-medium-image-zoom/dist/styles.css";
 
 const Weather = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-6">
-      <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4 mt-10">
-        <h2 className="text-2xl sm:text-3xl font-bold">Weather</h2>
-        <a
-          href="https://github.com/GrenteGlenn/Weather"
-          target="_blank"
-          className="text-cyan-600 border shadow-lg p-2 hover:underline font-semibold text-sm sm:text-base"
-        >
-          Code sur GitHub
-        </a>
-      </div>
+    <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-12 py-16 sm:py-20">
       <div className="flex flex-col md:flex-row gap-4 w-full max-w-7xl">
         <div className="w-full h-full rounded-xl flex items-center justify-center bg-white">
           <Zoom>
@@ -47,6 +37,17 @@ const Weather = () => {
             ></Image>
           </Zoom>
         </div>
+      </div>
+
+      <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4">
+        <h2 className="text-2xl sm:text-3xl font-bold">Weather</h2>
+        <a
+          href="https://github.com/GrenteGlenn/Weather"
+          target="_blank"
+          className="text-cyan-600 border shadow-lg p-2 hover:underline font-semibold text-sm sm:text-base"
+        >
+          Code sur GitHub
+        </a>
       </div>
 
       {/* Résumé */}

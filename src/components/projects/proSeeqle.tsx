@@ -1,6 +1,5 @@
 "use client";
 
-
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Contact from "../contact/contact";
 import Zoom from "react-medium-image-zoom";
@@ -30,18 +29,7 @@ const ProSeeqle = () => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-6">
-      <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4 mt-10">
-        <h2 className="text-2xl sm:text-3xl font-bold">ProSeeqle</h2>
-        <a
-          href="https://seeqle.com"
-          target="_blank"
-          className="text-cyan-600 hover:underline font-semibold text-sm sm:text-base"
-        >
-          Seeqle.com
-        </a>
-      </div>
-
+    <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-12 py-16 sm:py-20">
       {/* Carrousel responsive */}
       <div className="relative flex items-center justify-center w-full max-w-7xl">
         <div className="w-full h-full overflow-hidden border border-cyan-400 shadow-lg rounded-xl flex items-center justify-center bg-white">
@@ -84,6 +72,16 @@ const ProSeeqle = () => {
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
+      </div>
+      <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4 mt-10">
+        <h2 className="text-2xl sm:text-3xl font-bold">ProSeeqle</h2>
+        <a
+          href="https://seeqle.com"
+          target="_blank"
+          className="text-cyan-600 hover:underline font-semibold text-sm sm:text-base"
+        >
+          Seeqle.com
+        </a>
       </div>
 
       {/* Résumé */}

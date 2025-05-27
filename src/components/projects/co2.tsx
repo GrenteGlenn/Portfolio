@@ -24,19 +24,8 @@ const Co2 = () => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-6">
-      <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-          Bilan Carbone CO2
-        </h2>
-        <a
-          href="https://onelogic.fr/calculateur-co2"
-          target="_blank"
-          className="text-cyan-600 hover:underline font-semibold text-sm sm:text-base"
-        >
-          Onelogic.fr
-        </a>
-      </div>
+    <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-12 py-16 sm:py-20">
+      
 
       {/* Carrousel responsive */}
       <div className="relative flex items-center justify-center w-full max-w-7xl">
@@ -80,6 +69,18 @@ const Co2 = () => {
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
+      </div>
+      <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4 ">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+          Bilan Carbone CO2
+        </h2>
+        <a
+          href="https://onelogic.fr/calculateur-co2"
+          target="_blank"
+          className="text-cyan-600 hover:underline font-semibold text-sm sm:text-base"
+        >
+          Onelogic.fr
+        </a>
       </div>
 
       {/* Résumé */}
