@@ -1,6 +1,7 @@
 "use client";
 import { FC, useState } from "react";
 import emailjs from "emailjs-com";
+import { usePathname } from "next/navigation";
 
 const Contact: FC = () => {
   const [form, setForm] = useState({
@@ -11,6 +12,8 @@ const Contact: FC = () => {
 
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState<boolean | null>(null);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/home";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -64,7 +67,9 @@ const Contact: FC = () => {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="w-full border-b bg-[#FAF3E0] border-blue-500 focus:outline-none focus:border-blue-500 transition"
+                className={`w-full border-b ${
+                  isHomePage ? "bg-[#FAF3E0]" : "bg-white"
+                } border-blue-500 focus:outline-none focus:border-blue-500 transition`}
               />
             </div>
 
@@ -79,7 +84,9 @@ const Contact: FC = () => {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="w-full border-b bg-[#FAF3E0] border-blue-500 focus:outline-none focus:border-blue-500 transition"
+                className={`w-full border-b ${
+                  isHomePage ? "bg-[#FAF3E0]" : "bg-white"
+                } border-blue-500 focus:outline-none focus:border-blue-500 transition`}
               />
             </div>
           </div>
@@ -95,7 +102,9 @@ const Contact: FC = () => {
               onChange={handleChange}
               placeholder="Entrer votre message"
               required
-              className="w-full border-b bg-[#FAF3E0] border-blue-500 focus:outline-none focus:border-blue-500 transition resize-none"
+              className={`w-full border-b ${
+                isHomePage ? "bg-[#FAF3E0]" : "bg-white"
+              } border-blue-500 focus:outline-none focus:border-blue-500 transition`}
             />
           </div>
 

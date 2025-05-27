@@ -40,13 +40,16 @@ const Co2 = () => {
 
       {/* Carrousel responsive */}
       <div className="relative flex items-center justify-center w-full max-w-7xl">
-        <div className="w-full h-full overflow-hidden border border-cyan-400 shadow-lg rounded-xl flex items-center justify-center bg-white">
+        <div className=" w-full h-full overflow-hidden border border-cyan-400 shadow-lg rounded-xl flex items-center justify-center bg-white">
           <Zoom>
-            <Image
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex}`}
-              className="object-contain w-full h-full"
-            />
+            {images[currentIndex] ? (
+              <Image
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex}`}
+                width={1400}
+                height={600}
+              />
+            ) : null}
           </Zoom>
         </div>
 
@@ -83,25 +86,25 @@ const Co2 = () => {
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
           Lors de mon alternance chez OneLogic, une entreprise engagée dans la
-          transition numérique responsable, j&apos;ai été chargé de concevoir une
-          plateforme web capable d&apos;évaluer les émissions de CO2 des sites
-          internet.
+          transition numérique responsable, j&apos;ai été chargé de concevoir
+          une plateforme web capable d&apos;évaluer les émissions de CO2 des
+          sites internet.
         </span>
         <span className="block">
           Le fonctionnement est simple : l&apos;utilisateur saisit une URL, le
-          système l&apos;analyse via l&apos;API Google PageSpeed et la librairie CO2.js,
-          puis affiche un carboscore, les performances, et l&apos;impact
+          système l&apos;analyse via l&apos;API Google PageSpeed et la librairie
+          CO2.js, puis affiche un carboscore, les performances, et l&apos;impact
           environnemental du site.
         </span>
         <span className="block">
-          L&apos;interface affiche également des badges pour reconnaître les bons
-          élèves écologiques, ainsi que des conseils techniques adaptés au
+          L&apos;interface affiche également des badges pour reconnaître les
+          bons élèves écologiques, ainsi que des conseils techniques adaptés au
           niveau de chaque utilisateur.
         </span>
         <span className="block">
-          J&apos;ai également intégré des optimisations telles que les graphes avec
-          Chart.js, des scripts personnalisés et un système de recommandations
-          avancées à destination des développeurs.
+          J&apos;ai également intégré des optimisations telles que les graphes
+          avec Chart.js, des scripts personnalisés et un système de
+          recommandations avancées à destination des développeurs.
         </span>
       </div>
 

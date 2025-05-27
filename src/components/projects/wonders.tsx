@@ -2,8 +2,8 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import Contact from "../contact/contact";
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
 
 const images = [
@@ -31,7 +31,7 @@ const Wonders = () => {
   return (
     <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-6">
       <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold break-words">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold break-words mt-4">
           Wonders
         </h2>
       </div>
@@ -40,11 +40,14 @@ const Wonders = () => {
       <div className="relative w-full max-w-7xl">
         <div className="w-full aspect-[16/9] sm:aspect-[3/2] lg:aspect-[4/2] overflow-hidden border border-cyan-400 shadow-lg rounded-xl bg-white flex items-center justify-center">
           <Zoom>
-            <Image
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex}`}
-              className="object-contain w-full h-full"
-            />
+            {images[currentIndex] ? (
+              <Image
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex}`}
+                width={1400}
+                height={600}
+              />
+            ) : null}
           </Zoom>
         </div>
 

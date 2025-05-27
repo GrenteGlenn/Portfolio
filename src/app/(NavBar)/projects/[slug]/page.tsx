@@ -62,6 +62,5 @@ export default function ProjectDetails() {
         </div>
       );
 
-    // Ajoutez d'autres cas pour chaque projet
   }
 }

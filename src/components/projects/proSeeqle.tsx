@@ -1,8 +1,8 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import Contact from "../contact/contact";
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
 
 const images = [
@@ -43,11 +43,14 @@ const ProSeeqle = () => {
       <div className="relative flex items-center justify-center w-full max-w-7xl">
         <div className="w-full h-full overflow-hidden border border-cyan-400 shadow-lg rounded-xl flex items-center justify-center bg-white">
           <Zoom>
-            <Image
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex}`}
-              className="object-contain w-full h-full"
-            />
+            {images[currentIndex] ? (
+              <Image
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex}`}
+                width={1400}
+                height={600}
+              />
+            ) : null}
           </Zoom>
         </div>
 
@@ -83,15 +86,15 @@ const ProSeeqle = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Au sein de l&apos;entreprise Seeqle, j&apos;ai participé à la refonte complète
-          de la plateforme ProSeeqle, une solution de recrutement basée sur
-          l&apos;intelligence artificielle. Cette plateforme met en relation des
-          entreprises avec des candidats qualifiés, en leur proposant des offres
-          d&apos;emploi adaptées à leurs compétences. Mon rôle a été de réécrire
-          toute l&apos;application — initialement développée sous Angular — en
-          utilisant React et Next.js, avec une attention particulière portée à
-          la performance, la maintenabilité et l&apos;UX/UI, afin de proposer une
-          expérience fluide et moderne.
+          Au sein de l&apos;entreprise Seeqle, j&apos;ai participé à la refonte
+          complète de la plateforme ProSeeqle, une solution de recrutement basée
+          sur l&apos;intelligence artificielle. Cette plateforme met en relation
+          des entreprises avec des candidats qualifiés, en leur proposant des
+          offres d&apos;emploi adaptées à leurs compétences. Mon rôle a été de
+          réécrire toute l&apos;application — initialement développée sous
+          Angular — en utilisant React et Next.js, avec une attention
+          particulière portée à la performance, la maintenabilité et
+          l&apos;UX/UI, afin de proposer une expérience fluide et moderne.
         </span>
         <span className="block">
           La nouvelle version de la plateforme inclut un dashboard centralisé,
@@ -99,17 +102,17 @@ const ProSeeqle = () => {
           campagnes de recrutement. Il permet aux recruteurs d&apos;accéder à
           diverses statistiques en temps réel, telles que le nombre de
           candidatures reçues, l&apos;évolution des campagnes sur plusieurs
-          semaines/mois, et la qualification des profils. L&apos;objectif était de
-          rendre les données lisibles et directement exploitables via une
+          semaines/mois, et la qualification des profils. L&apos;objectif était
+          de rendre les données lisibles et directement exploitables via une
           interface structurée.
         </span>
         <span className="block">
-          L&apos;un des piliers de ProSeeqle est le module de création de campagnes
-          de recrutement. L&apos;utilisateur peut générer une campagne en quelques
-          clics, en définissant les critères importants (secteur d&apos;activité,
-          localisation, âge, etc.). Un système d&apos;audiences intelligentes,
-          constitué de plus de 5000 profils métiers, permet de cibler très
-          précisément les candidats.
+          L&apos;un des piliers de ProSeeqle est le module de création de
+          campagnes de recrutement. L&apos;utilisateur peut générer une campagne
+          en quelques clics, en définissant les critères importants (secteur
+          d&apos;activité, localisation, âge, etc.). Un système d&apos;audiences
+          intelligentes, constitué de plus de 5000 profils métiers, permet de
+          cibler très précisément les candidats.
         </span>
         <span className="block">
           Une attention particulière a été portée à la gestion du budget
@@ -121,12 +124,12 @@ const ProSeeqle = () => {
           pour s&apos;adapter à chaque plateforme.
         </span>
         <span className="block">
-          Grâce à l&apos;intégration d&apos;OpenAI, la plateforme permet de générer
-          automatiquement des textes de recrutement cohérents et ciblés, en
-          fonction des informations saisies par l&apos;utilisateur. Une interface
-          permet de visualiser des previews de chaque annonce, réseau par
-          réseau, et d&apos;apporter des modifications en temps réel avant la mise en
-          ligne.
+          Grâce à l&apos;intégration d&apos;OpenAI, la plateforme permet de
+          générer automatiquement des textes de recrutement cohérents et ciblés,
+          en fonction des informations saisies par l&apos;utilisateur. Une
+          interface permet de visualiser des previews de chaque annonce, réseau
+          par réseau, et d&apos;apporter des modifications en temps réel avant
+          la mise en ligne.
         </span>
         <span className="block">
           Enfin, la plateforme inclut plusieurs pages de paramétrage utilisateur

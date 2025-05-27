@@ -21,8 +21,8 @@ const Weather = () => {
           <Zoom>
             <Image
               src="/images/weather/Menu.png"
-              className="h-[600px] w-full
-              object-contain "
+              width={1400}
+              height={600}
               alt=""
             ></Image>
           </Zoom>
@@ -31,18 +31,18 @@ const Weather = () => {
           <Zoom>
             <Image
               src="/images/weather/MainPage.png"
-              className="h-[600px] w-full
-              object-contain "
+              width={1400}
+              height={600}
               alt=""
             ></Image>
           </Zoom>
         </div>
         <div className="w-full h-full rounded-xl flex items-center justify-center bg-white">
           <Zoom>
-          <Image
+            <Image
               src="/images/weather/villeSave.png"
-              className="h-[600px] w-full
-              object-contain "
+              width={1400}
+              height={600}
               alt=""
             ></Image>
           </Zoom>
@@ -52,39 +52,42 @@ const Weather = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Dans le cadre de mon alternance, j&apos;ai développé une application mobile
-          de météo en utilisant Flutter pour l&apos;interface et Firebase pour la
-          gestion des données. Ce projet avait pour but d&apos;explorer une nouvelle
-          stack technique, tout en intégrant des APIs en temps réel, notamment
-          celle de OpenWeatherMap, afin d&apos;afficher des données météorologiques
-          fiables et à jour. L&apos;application s&apos;inscrit dans une démarche de veille
-          technologique et m&apos;a permis de consolider mes compétences en
-          développement mobile multiplateforme.
+          Dans le cadre de mon alternance, j&apos;ai développé une application
+          mobile de météo en utilisant Flutter pour l&apos;interface et Firebase
+          pour la gestion des données. Ce projet avait pour but d&apos;explorer
+          une nouvelle stack technique, tout en intégrant des APIs en temps
+          réel, notamment celle de OpenWeatherMap, afin d&apos;afficher des
+          données météorologiques fiables et à jour. L&apos;application
+          s&apos;inscrit dans une démarche de veille technologique et m&apos;a
+          permis de consolider mes compétences en développement mobile
+          multiplateforme.
         </span>
         <span className="block">
-          L&apos;interface principale de l&apos;application offre une présentation
-          synthétique des informations clés : la ville recherchée, la date et
-          l&apos;heure actuelles, la température, ainsi que l&apos;état du ciel. L&apos;accent
-          a été mis sur la simplicité et la clarté des données affichées, avec
-          une approche visuelle adaptée aux usages mobiles. L&apos;expérience
-          utilisateur est immédiate, fluide et orientée vers la compréhension
-          rapide de la météo en un coup d&apos;œil.
+          L&apos;interface principale de l&apos;application offre une
+          présentation synthétique des informations clés : la ville recherchée,
+          la date et l&apos;heure actuelles, la température, ainsi que
+          l&apos;état du ciel. L&apos;accent a été mis sur la simplicité et la
+          clarté des données affichées, avec une approche visuelle adaptée aux
+          usages mobiles. L&apos;expérience utilisateur est immédiate, fluide et
+          orientée vers la compréhension rapide de la météo en un coup
+          d&apos;œil.
         </span>
         <span className="block">
-          Un menu latéral permet à l&apos;utilisateur de personnaliser son expérience
-          : il peut basculer entre Celsius et Fahrenheit, activer un mode sombre
-          adapté aux daltoniens, ou accéder rapidement aux paramètres de
-          l&apos;application. Le design a été pensé de façon minimaliste, pour
-          s&apos;intégrer harmonieusement aux habitudes des utilisateurs tout en
-          restant accessible.
+          Un menu latéral permet à l&apos;utilisateur de personnaliser son
+          expérience : il peut basculer entre Celsius et Fahrenheit, activer un
+          mode sombre adapté aux daltoniens, ou accéder rapidement aux
+          paramètres de l&apos;application. Le design a été pensé de façon
+          minimaliste, pour s&apos;intégrer harmonieusement aux habitudes des
+          utilisateurs tout en restant accessible.
         </span>
         <span className="block">
           Enfin, l&apos;application mémorise localement les villes consultées
-          récemment, permettant à l&apos;utilisateur de retrouver ses recherches sans
-          effort. Un bouton dédié permet de supprimer une ville de la liste,
-          rendant l&apos;interface plus propre et personnalisable. Ce projet a
-          représenté une belle opportunité de sortir de l&apos;écosystème web
-          classique pour m&apos;initier efficacement au développement mobile moderne.
+          récemment, permettant à l&apos;utilisateur de retrouver ses recherches
+          sans effort. Un bouton dédié permet de supprimer une ville de la
+          liste, rendant l&apos;interface plus propre et personnalisable. Ce
+          projet a représenté une belle opportunité de sortir de
+          l&apos;écosystème web classique pour m&apos;initier efficacement au
+          développement mobile moderne.
         </span>
       </div>
 
