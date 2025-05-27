@@ -1,9 +1,12 @@
+"use client";
+
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
 import Contact from "../contact/contact";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
+import { useState } from "react";
 
 const images = [
   "/images/seeqle/Dashboard2.png",
