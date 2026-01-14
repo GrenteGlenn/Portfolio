@@ -7,15 +7,14 @@ import "react-medium-image-zoom/dist/styles.css";
 import Image from "next/image";
 
 const images = [
-  "/images/onelogic/SearchOnelogic.png",
-  "/images/onelogic/performancesOnelogic.png",
-  "/images/onelogic/impactEN.png",
-  "/images/onelogic/Status.png",
-  "/images/onelogic/Optimisation.png",
-  "/images/onelogic/Optimisation2.png",
+  "/images/humanThings/cagnotte.png",
+  "/images/humanThings/affichage.png",
+  "/images/humanThings/panel.png",
+  "/images/humanThings/login.png",
+  "/images/humanThings/bingo.png",
 ];
 
-const Co2 = () => {
+const HumanThings = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () =>
@@ -70,40 +69,44 @@ const Co2 = () => {
       </div>
       <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4 ">
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
-          Bilan Carbone CO2
+          Event Bingo
         </h2>
-        <a
-          href="https://onelogic.fr/calculateur-co2"
-          target="_blank"
-          className="text-cyan-600 hover:underline font-semibold text-sm sm:text-base"
+        <span
+          
+          className=" font-semibold text-sm sm:text-base"
         >
-          Onelogic.fr
-        </a>
+          Human Things Event
+        </span>
       </div>
 
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Lors de mon alternance chez OneLogic, une entreprise engagée dans la
-          transition numérique responsable, j&apos;ai été chargé de concevoir
-          une plateforme web capable d&apos;évaluer les émissions de CO2 des
-          sites internet.
+          Dans le cadre d’une mission en freelance, j’ai été contacté par un
+          client pour la mise en place d’un dispositif interactif à l’occasion
+          d’un événement client. Le projet consistait à développer une cagnotte
+          interactive ainsi qu’un jeu de bingo, pouvant être utilisé
+          simultanément par environ 800 participants, accompagné d’une page
+          d’affichage en temps réel des numéros tirés.
         </span>
         <span className="block">
-          Le fonctionnement est simple : l&apos;utilisateur saisit une URL, le
-          système l&apos;analyse via l&apos;API Google PageSpeed et la librairie
-          CO2.js, puis affiche un carboscore, les performances, et l&apos;impact
-          environnemental du site.
+          Un panel de contrôle dédié a également été conçu afin de permettre au
+          client d’interagir facilement avec le système et de piloter l’ensemble
+          des actions en direct.
         </span>
         <span className="block">
-          L&apos;interface affiche également des badges pour reconnaître les
-          bons élèves écologiques, ainsi que des conseils techniques adaptés au
-          niveau de chaque utilisateur.
+          Dans une optique de fluidité et de dynamisme lors de l’événement, j’ai
+          porté une attention particulière à la réactivité des actions
+          déclenchées depuis le panel de contrôle. La gestion de la cagnotte
+          était entièrement entre les mains du client : une simple pression sur
+          la touche espace permettait d’activer les animations et les mises à
+          jour en temps réel.
         </span>
         <span className="block">
-          J&apos;ai également intégré des optimisations telles que les graphes
-          avec Chart.js, des scripts personnalisés et un système de
-          recommandations avancées à destination des développeurs.
+          Le délai de réalisation était fixé à 10 jours, incluant le
+          développement, des tests de stabilité, ainsi que plusieurs phases de
+          vérification et d’optimisation, afin de garantir une expérience fluide
+          et fiable le jour de l’événement.
         </span>
       </div>
 
@@ -132,4 +135,4 @@ const Co2 = () => {
   );
 };
 
-export default Co2;
+export default HumanThings;

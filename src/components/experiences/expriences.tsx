@@ -4,8 +4,10 @@ import { useState } from "react";
 import Seeqle from "./seeqle";
 import OneLogic from "./onlogic";
 import Etna from "./etna";
+import HumanThings from "./humanThings";
 
 const experiences = [
+  { key: "humanthings", name: "Human Things", component: <HumanThings /> },
   { key: "seeqle", name: "Seeqle", component: <Seeqle /> },
   { key: "onelogic", name: "OneLogic", component: <OneLogic /> },
   { key: "etna", name: "ETNA", component: <Etna /> },

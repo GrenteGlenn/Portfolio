@@ -8,6 +8,7 @@ const components: Record<string, React.ComponentType> = {
   weather: dynamic(() => import("@/src/components/projects/weather")),
   proSeeqle: dynamic(() => import("@/src/components/projects/proSeeqle")),
   wonders: dynamic(() => import("@/src/components/projects/wonders")),
+  HumanThings: dynamic(() => import("@/src/components/projects/humanThings")),
 };
 
 export default function ProjectRenderer({ slug }: { slug: string }) {

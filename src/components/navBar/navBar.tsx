@@ -17,7 +17,7 @@ const Navbar: FC = () => {
     pathname === "/projects/proSeeqle" ||
     pathname === "/projects/weather" ||
     pathname === "/projects/wonders";
-  const anchorBase = isDarkPage ? "/home" : "";
+  const anchorBase = isDarkPage ? "/" : "/";
 
   return (
     <nav

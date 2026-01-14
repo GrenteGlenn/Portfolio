@@ -1,7 +1,8 @@
 import { FC } from "react";
 import OneLogic from "./onlogic";
-import Minarm from "./etna";
 import Seeqle from "./seeqle";
+import Etna from "./etna";
+import HumanThings from "./humanThings";
 
 const Experience: FC = () => {
   return (
@@ -11,7 +12,8 @@ const Experience: FC = () => {
       <div className="justify-start items-start flex flex-col w-9/12 relative h-full ">
         <Seeqle />
         <OneLogic />
-        <Minarm />
+        <Etna />
+        <HumanThings />
       </div>
     </div>
   );
