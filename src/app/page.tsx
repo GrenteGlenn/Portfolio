@@ -113,7 +113,7 @@ const HomePage: FC = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">Contact</h2>
           <span className="text-gray-600 mb-4">
-            Tu peux me contacter par email ou via LinkedIn.
+            Vous pouvez me contacter par email ou via LinkedIn.
           </span>
           <Contact />
         </div>

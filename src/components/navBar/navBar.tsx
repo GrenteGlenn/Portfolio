@@ -64,7 +64,7 @@ const Navbar: FC = () => {
             </Link>
           ))}
           <a
-            href="/images/GrenteGlennCV.pdf"
+            href="/images/glenn-grente-cv.pdf"
             download
             className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors text-sm sm:text-md"
           >

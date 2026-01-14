@@ -4,7 +4,7 @@ import { FC } from "react";
 const HumanThings: FC = () => {
   return (
     <div>
-      <span className="font-bold">Octobre 2022 - Aujourd&apos;hui </span>
+      <span className="font-bold">Octobre 2025 - 15 janvier 2026 </span>
       <br />
       <br />
       <span>
