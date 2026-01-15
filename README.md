@@ -43,11 +43,11 @@ npm -v
 ## 📁 Structure du projet
 
 src/
-├── app/            # Pages (App Router)
-├── components/     # Composants UI
-├── hooks/          # Hooks personnalisés
-├── lib/            # Helpers / logique partagée
-└── public/         # Assets statiques
+- app/            # Pages (App Router)
+- components/     # Composants UI
+- hooks/          # Hooks personnalisés
+- lib/            # Helpers / logique partagée
+- public/         # Assets statiques
 
 --- 
 ## ▶️ Lancer le projet
