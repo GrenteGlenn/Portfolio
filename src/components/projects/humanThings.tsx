@@ -71,10 +71,7 @@ const HumanThings = () => {
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
           Event Bingo
         </h2>
-        <span
-          
-          className=" font-semibold text-sm sm:text-base"
-        >
+        <span className=" font-semibold text-sm sm:text-base">
           Human Things Event
         </span>
       </div>
@@ -82,31 +79,29 @@ const HumanThings = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Dans le cadre d’une mission en freelance, j’ai été contacté par un
-          client pour la mise en place d’un dispositif interactif à l’occasion
-          d’un événement client. Le projet consistait à développer une cagnotte
-          interactive ainsi qu’un jeu de bingo, pouvant être utilisé
-          simultanément par environ 800 participants, accompagné d’une page
-          d’affichage en temps réel des numéros tirés.
+          Conception et développement d’un dispositif interactif pour un
+          événement client, utilisé simultanément par environ 800 participants.
+        </span>
+        <span className="block ml-12">
+          • Développement d’un jeu de bingo temps réel
+          <br />
+          <br />
+          • Mise en place d’une cagnotte interactive avec animations
+          <br />
+          <br />
+          • Création d’une page d’affichage synchronisée en direct
+          <br />
+          <br />
+          • Développement d’un panel de contrôle pour le pilotage live
+          <br />
+          <br />• Optimisation des performances et de la réactivité en situation
+          réelle
         </span>
         <span className="block">
-          Un panel de contrôle dédié a également été conçu afin de permettre au
-          client d’interagir facilement avec le système et de piloter l’ensemble
-          des actions en direct.
+          Stack : <span className="text-slate-900 ml-1">React • Node.js • WebSockets • API REST • PostgreSQL</span>
         </span>
         <span className="block">
-          Dans une optique de fluidité et de dynamisme lors de l’événement, j’ai
-          porté une attention particulière à la réactivité des actions
-          déclenchées depuis le panel de contrôle. La gestion de la cagnotte
-          était entièrement entre les mains du client : une simple pression sur
-          la touche espace permettait d’activer les animations et les mises à
-          jour en temps réel.
-        </span>
-        <span className="block">
-          Le délai de réalisation était fixé à 10 jours, incluant le
-          développement, des tests de stabilité, ainsi que plusieurs phases de
-          vérification et d’optimisation, afin de garantir une expérience fluide
-          et fiable le jour de l’événement.
+          Focus :<span className="text-slate-900 ml-1"> Temps réel • Performance • Scalabilité • Événementiel</span>
         </span>
       </div>
 

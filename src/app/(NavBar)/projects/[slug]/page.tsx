@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import ProjectRenderer from "./ProjectRenderer";
 
-const validSlugs = ["co2", "weather", "proSeeqle", "wonders", "HumanThings"];
+const validSlugs = ["co2", "proSeeqle", "wonders", "HumanThings"];
   
 export async function generateStaticParams() {
   return validSlugs.map((slug) => ({ slug }));

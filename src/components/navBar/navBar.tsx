@@ -12,23 +12,22 @@ const Navbar: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pathname = usePathname();
-  const isDarkPage =
+ 
     pathname === "/projects/co2" ||
     pathname === "/projects/proSeeqle" ||
     pathname === "/projects/weather" ||
-    pathname === "/projects/wonders";
-  const anchorBase = isDarkPage ? "/" : "/";
+    pathname === "/projects/wonders" ||
+    pathname === "/projects/humanThings";
+  const anchorBase = pathname ? "/" : "/";
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 px-6 py-6 z-50 transition-colors duration-300 ${
-        isDarkPage ? "bg-gray-600" : "bg-[#FAF3E0]"
-      }`}
+      className="fixed top-0 left-0 right-0 px-6 py-6 z-50 transition-colors duration-300 bg-slate-100"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="text-xl font-semibold text-blue-600">&lt;/&gt;</span>
-          <span className="font-bold text-lg">Glenn</span>
+          <span className="font-bold text-lg text-neutral-600">Glenn</span>
         </div>
 
         {/* Mobile toggle button */}
@@ -52,12 +51,7 @@ const Navbar: FC = () => {
               scroll={true}
               className={`transition-colors duration-300 ${
                 active === id
-                  ? isDarkPage
-                    ? "text-blue-400 font-semibold"
-                    : "text-blue-600 font-semibold"
-                  : isDarkPage
-                  ? "text-white"
-                  : "text-black"
+             
               }`}
             >
               {id.charAt(0).toUpperCase() + id.slice(1)}

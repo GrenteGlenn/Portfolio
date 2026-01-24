@@ -83,54 +83,40 @@ const Wonders = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Dans le cadre de mon alternance à l’ETNA, j’ai développé une
-          application web complète de planification de voyages appelée Wonders.
-          Cette plateforme permet aux utilisateurs de construire un itinéraire
-          de A à Z : choix de la destination, sélection des activités,
-          réservation de vols, hôtels et visualisation d’un récapitulatif clair
-          et interactif. Le projet a été réalisé en Angular 18 pour le
-          front-end, tandis que le back-end s’appuie sur une architecture
-          Node.js en microservices, assurant performance, scalabilité et
-          maintenance modulaire.
+          Conception et développement d’une application web complète de
+          planification de voyages, de la définition des préférences utilisateur
+          jusqu’à la réservation et la visualisation d’itinéraires.
+        </span>
+        <span className="block ml-12">
+          • Développement du front-end en Angular 18
+          <br />
+          <br />
+          • Mise en place d’une architecture back-end en microservices Node.js
+          <br />
+          <br />
+          • Intégration d’APIs externes (vols, hôtels, cartes)
+          <br />
+          <br />
+          • Génération de recommandations via l’IA
+          <br />
+          <br />
+          • Gestion d’un moteur de recherche dynamique et filtrable
+          <br />
+          <br />• Développement d’un module communautaire (forum)
         </span>
         <span className="block">
-          L’expérience utilisateur débute par un questionnaire intelligent,
-          permettant de cerner les préférences de voyage (plage, nature,
-          culture, etc.). En fonction des réponses, l’application fait appel à
-          une intelligence artificielle pour proposer des destinations
-          pertinentes accompagnées d’images générées via l’API Google et de
-          descriptions personnalisées. L’utilisateur accède ensuite à une
-          interface moderne pour sélectionner ses activités, consulter des
-          cartes interactives, et explorer les monuments et attraits du pays
-          choisi.
+          Stack :
+          <span className="text-slate-900 ml-1">
+            Angular 18 • Node.js • Express • Microservices • API REST • Google
+            Maps
+          </span>
         </span>
         <span className="block">
-          Le moteur de recherche de vols et hôtels est performant et dynamique.
-          Les résultats sont filtrables selon divers critères (budget, escales,
-          localisation, etc.), avec résumé latéral mis à jour en temps réel. Les
-          données sont récupérées via des APIs externes, intégrées à des
-          microservices spécialisés (vols, hôtels, utilisateurs). Cette
-          structure permet une gestion fluide et découplée des modules, idéale
-          pour un projet à grande échelle.
-        </span>
-        <span className="block">
-          En complément de cette fonctionnalité de planification, j’ai développé
-          un forum communautaire intégré à la plateforme. Les utilisateurs
-          peuvent y créer des fils de discussion, poser des questions, liker des
-          messages, et interagir autour de thématiques liées au voyage. Les
-          données des utilisateurs sont anonymisées ou sécurisées, et
-          l’interface respecte une structure claire pour faciliter les échanges.
-          Ce module enrichit fortement l’aspect social et collaboratif du
-          projet.
-        </span>
-        <span className="block">
-          Ce projet m’a permis de travailler en profondeur sur des sujets variés
-          : UX/UI, intégration d’IA, API REST, Google Maps, gestion d’état
-          Angular, modélisation de base de données, et sécurité backend. Il
-          illustre ma capacité à concevoir une application complète en
-          autonomie, à intégrer des outils modernes (IA, microservices,
-          Firebase, etc.) et à proposer une expérience utilisateur soignée et
-          intuitive.
+          Focus :
+          <span className="text-slate-900 ml-1">
+           
+            Architecture • Scalabilité • UX • APIs • IA{" "}
+          </span>
         </span>
       </div>
 

@@ -11,7 +11,7 @@ export default function MainLayout({
       
       <Navbar />
       <main className="flex-1 ">{children}</main>
-        <footer className="bg-gray-600 text-white py-6 px-6">
+        <footer className="bg-slate-100 text-slate-900 py-6 px-6">
           <div className="flex items-center justify-between w-full max-w-6xl mx-auto">
            
             <span className="text-sm">

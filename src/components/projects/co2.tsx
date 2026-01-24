@@ -84,26 +84,35 @@ const Co2 = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Lors de mon alternance chez OneLogic, une entreprise engagée dans la
-          transition numérique responsable, j&apos;ai été chargé de concevoir
-          une plateforme web capable d&apos;évaluer les émissions de CO2 des
-          sites internet.
+          Conception et développement d’une plateforme web permettant d’évaluer
+          l’impact environnemental de sites internet à partir de leur URL.
+        </span>
+        <span className="block ml-12">
+          • Analyse des performances via Google PageSpeed Insights
+          <br />
+          <br />
+          • Calcul des émissions de CO₂ à l’aide de CO2.js
+          <br />
+          <br />
+          • Affichage d’un score environnemental et d’indicateurs clés
+          <br />
+          <br />
+          • Mise en place de recommandations techniques personnalisées
+          <br />
+          <br />• Visualisation des données via des graphiques interactifs
         </span>
         <span className="block">
-          Le fonctionnement est simple : l&apos;utilisateur saisit une URL, le
-          système l&apos;analyse via l&apos;API Google PageSpeed et la librairie
-          CO2.js, puis affiche un carboscore, les performances, et l&apos;impact
-          environnemental du site.
+          Stack :
+          <span className="text-slate-900 ml-1">
+            JavaScript • Node.js • API REST • CO2.js • Google PageSpeed API •
+            Chart.js
+          </span>
         </span>
         <span className="block">
-          L&apos;interface affiche également des badges pour reconnaître les
-          bons élèves écologiques, ainsi que des conseils techniques adaptés au
-          niveau de chaque utilisateur.
-        </span>
-        <span className="block">
-          J&apos;ai également intégré des optimisations telles que les graphes
-          avec Chart.js, des scripts personnalisés et un système de
-          recommandations avancées à destination des développeurs.
+          Focus :
+          <span className="text-slate-900 ml-1">
+            Éco-conception • Data • Performance • UX
+          </span>
         </span>
       </div>
 

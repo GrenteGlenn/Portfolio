@@ -87,56 +87,38 @@ const ProSeeqle = () => {
       {/* Résumé */}
       <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
         <span className="block">
-          Au sein de l&apos;entreprise Seeqle, j&apos;ai participé à la refonte
-          complète de la plateforme ProSeeqle, une solution de recrutement basée
-          sur l&apos;intelligence artificielle. Cette plateforme met en relation
-          des entreprises avec des candidats qualifiés, en leur proposant des
-          offres d&apos;emploi adaptées à leurs compétences. Mon rôle a été de
-          réécrire toute l&apos;application — initialement développée sous
-          Angular — en utilisant React et Next.js, avec une attention
-          particulière portée à la performance, la maintenabilité et
-          l&apos;UX/UI, afin de proposer une expérience fluide et moderne.
+          Participation à la refonte complète d’une plateforme SaaS de
+          recrutement basée sur l’intelligence artificielle, utilisée en
+          production par des recruteurs.
+        </span>
+        <span className="block ml-12">
+          • Migration d’une application Angular vers React / Next.js
+          <br />
+          <br />
+          • Refonte complète de l’UI à partir de maquettes Figma
+          <br />
+          <br />
+          • Développement d’un dashboard de suivi de campagnes (statistiques,
+          performances)
+          <br />
+          <br />
+          • Conception du module de création de campagnes de recrutement
+          <br />
+          <br />
+          • Intégration de fonctionnalités basées sur OpenAI
+          <br />
+          <br />
+          • Harmonisation front-end / back-end et amélioration de la
+          maintenabilité
         </span>
         <span className="block">
-          La nouvelle version de la plateforme inclut un dashboard centralisé,
-          conçu pour offrir une visualisation claire et intuitive du suivi de
-          campagnes de recrutement. Il permet aux recruteurs d&apos;accéder à
-          diverses statistiques en temps réel, telles que le nombre de
-          candidatures reçues, l&apos;évolution des campagnes sur plusieurs
-          semaines/mois, et la qualification des profils. L&apos;objectif était
-          de rendre les données lisibles et directement exploitables via une
-          interface structurée.
+          Stack :
+          <span className="text-slate-900 ml-1">
+            Next.js • React • TypeScript • Prisma • PostgreSQL • OpenAI
+          </span>
         </span>
         <span className="block">
-          L&apos;un des piliers de ProSeeqle est le module de création de
-          campagnes de recrutement. L&apos;utilisateur peut générer une campagne
-          en quelques clics, en définissant les critères importants (secteur
-          d&apos;activité, localisation, âge, etc.). Un système d&apos;audiences
-          intelligentes, constitué de plus de 5000 profils métiers, permet de
-          cibler très précisément les candidats.
-        </span>
-        <span className="block">
-          Une attention particulière a été portée à la gestion du budget
-          publicitaire, réparti entre plusieurs réseaux sociaux (LinkedIn,
-          Facebook, Instagram, Twitter, TikTok). Les recruteurs peuvent définir
-          manuellement un budget ou laisser un algorithme basé sur l&apos;IA en
-          optimisant la répartition selon les performances attendues. Le visuel
-          des campagnes peut également être configuré (médias, textes, preview)
-          pour s&apos;adapter à chaque plateforme.
-        </span>
-        <span className="block">
-          Grâce à l&apos;intégration d&apos;OpenAI, la plateforme permet de
-          générer automatiquement des textes de recrutement cohérents et ciblés,
-          en fonction des informations saisies par l&apos;utilisateur. Une
-          interface permet de visualiser des previews de chaque annonce, réseau
-          par réseau, et d&apos;apporter des modifications en temps réel avant
-          la mise en ligne.
-        </span>
-        <span className="block">
-          Enfin, la plateforme inclut plusieurs pages de paramétrage utilisateur
-          et entreprise, offrant un contrôle total sur les informations
-          personnelles, les préférences, et les données affichées sur la page
-          carrière.
+          Focus : <span className="text-slate-900 ml-1">SaaS • Performance • UX/UI • Données • Production</span>
         </span>
       </div>
 
