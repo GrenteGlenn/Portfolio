@@ -12,18 +12,20 @@ const Navbar: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pathname = usePathname();
- 
-    pathname === "/projects/co2" ||
-    pathname === "/projects/proSeeqle" ||
-    pathname === "/projects/weather" ||
-    pathname === "/projects/wonders" ||
-    pathname === "/projects/humanThings";
-  const anchorBase = pathname ? "/" : "/";
+
+  const projectPages = [
+    "/projects/co2",
+    "/projects/proSeeqle",
+    "/projects/weather",
+    "/projects/wonders",
+    "/projects/humanThings",
+  ];
+
+  const isProjectPage = projectPages.includes(pathname ?? "");
+  const anchorBase = isProjectPage ? "/" : "";
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 px-6 py-6 z-50 transition-colors duration-300 bg-slate-100"
-    >
+    <nav className="fixed top-0 left-0 right-0 px-6 py-6 z-50 transition-colors duration-300 bg-slate-100">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="text-xl font-semibold text-blue-600">&lt;/&gt;</span>
@@ -49,10 +51,7 @@ const Navbar: FC = () => {
               key={id}
               href={`${anchorBase}#${id}`}
               scroll={true}
-              className={`transition-colors duration-300 ${
-                active === id
-             
-              }`}
+              className={`transition-colors duration-300 ${active === id}`}
             >
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </Link>
