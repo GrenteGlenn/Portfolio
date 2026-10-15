@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "fetch-piloty-jobs": "ts-node scripts/fetch-jobs.ts"
+    "start": "next start"
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.2.3",

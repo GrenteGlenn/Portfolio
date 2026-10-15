@@ -175,7 +175,7 @@ const CaseStudy: FC<CaseStudyProps> = (props) => (
         </div>
         <a
           href="mailto:grenteglennpro@gmail.com"
-          className="inline-flex min-h-12 items-center rounded-lg bg-[#15171C] px-[22px] text-[15px] font-medium text-white hover:bg-[#3D424D]"
+          className="inline-flex min-h-12 items-center rounded-xl bg-[#15171C] px-[22px] text-[15px] font-medium text-white hover:bg-[#3D424D]"
         >
           Me contacter pour un CDI
         </a>
