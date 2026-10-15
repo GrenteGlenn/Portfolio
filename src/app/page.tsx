@@ -1,7 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
 import Navbar from "@/src/components/navBar/navBar";
-import AboutMe from "@/src/components/about/about";
 import AllProject from "@/src/components/projects/allProject";
 import Contact from "@/src/components/contact/contact";
 import ExperienceLists from "@/src/components/experiences/experiences";
