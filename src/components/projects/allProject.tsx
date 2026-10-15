@@ -1,93 +1,119 @@
 import { FC } from "react";
-import { Card, CardContent, CardFooter } from "../ui/card";
 import Link from "next/link";
 import Image from "next/image";
 
 interface Project {
+  slug: string;
   title: string;
+  category: string;
+  pitch: string;
+  role: string;
   image: string;
-  alt: string;
-  link?: string;
-  label?: string;
-  slug?: string;
+  imageAlt: string;
+  externalLink?: { label: string; href: string };
 }
 
 const projects: Project[] = [
   {
-    title: "Human Things",
-    image: "/images/humanThings.png",
-    alt: "Human Things",
-    label: "Freelance",
-    slug: "HumanThings",
-  },
-  {
-    title: "ProSeeqle",
-    image: "/images/seeqle-logo.jpg",
-    alt: "Seeqle",
-    link: "https://www.seeqle.com/",
-    label: "CDD",
     slug: "proSeeqle",
+    title: "ProSeeqle",
+    category: "SaaS RH · En production",
+    pitch:
+      "Migrer d'Angular vers Next.js une plateforme utilisée chaque jour par des recruteurs, sans interrompre le service.",
+    role: "développeur full stack au sein de l'équipe produit.",
+    image: "/images/seeqle/Dashboard2.png",
+    imageAlt: "Tableau de bord des campagnes de recrutement de ProSeeqle",
   },
   {
-    title: "OneLogic",
-    image: "/images/onelogic.png",
-    alt: "OneLogic",
-    link: "https://www.onelogic.fr/",
-    label: "CDD",
-    slug: "co2",
+    slug: "HumanThings",
+    title: "Event Bingo",
+    category: "Temps réel · 800 participants",
+    pitch:
+      "Synchroniser l'état d'un jeu entre 800 téléphones, un écran géant et un panel de pilotage pendant un événement en direct.",
+    role: "conception et développement de bout en bout, seul développeur.",
+    image: "/images/humanThings/panel.png",
+    imageAlt: "Panel de pilotage de l'événement Bingo",
+    externalLink: { label: "Code source", href: "https://github.com/GrenteGlenn/Bingo-Game" },
   },
   {
-    title: "Projet Master",
-    image: "/images/Wonders.png",
-    alt: "Wonders",
     slug: "wonders",
+    title: "Wonders",
+    category: "Microservices · Projet de Master",
+    pitch:
+      "Une plateforme de planification de voyages en 6 microservices Node.js, avec un front Angular 18 et une CI qui teste chaque service à chaque merge request.",
+    role: "front Angular et authentification, dans une équipe de 6.",
+    image: "/images/wonders/homepage.png",
+    imageAlt: "Page d'accueil de l'application Wonders",
+    externalLink: { label: "Code source", href: "https://github.com/GrenteGlenn/wonders" },
+  },
+  {
+    slug: "co2",
+    title: "Calculateur CO₂",
+    category: "Éco-conception · En ligne",
+    pitch:
+      "Estimer l'empreinte carbone d'un site à partir de sa seule URL, en croisant les données de PageSpeed Insights et le modèle de CO2.js.",
+    role: "conception et développement de l'outil.",
+    image: "/images/onelogic/impactEN.png",
+    imageAlt: "Résultat d'analyse du calculateur d'empreinte carbone",
+    externalLink: { label: "Voir l'outil", href: "https://onelogic.fr/calculateur-co2" },
   },
 ];
 
-const AllProject: FC = () => {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 px-6">
-      {projects.map(({ title, image, alt, label, slug }, index) => (
-        <Card
-          key={index}
-          className="bg-white shadow-xl rounded-xl transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
-        >
-          <Link
-            href={`/projects/${slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <CardContent className="flex flex-col justify-center items-center p-4 h-60 ">
-              <Image
-                src={image}
-                alt={alt}
-                width={160}
-                height={160}
-                className={`rounded-xl ${
-                  alt === "Wonders" ? "bg-gray-800 p-2" : ""
-                } ${
-                  alt === "ProSeeqle" ||
-                  alt === "Wonders" ||
-                  alt === "CO2"   ||
-                  alt === "Human Things"
-                    ? "h-40 w-40"
-                    : "h-30 w-60"
-                }`}
-              />
-            </CardContent>
-          </Link>
-          <CardFooter className="bg-gray-100 p-4 flex justify-between w-full">
-            <p className="text-slate-900">{title}</p>
+const AllProject: FC = () => (
+  <div className="flex flex-wrap gap-6">
+    {projects.map((project) => (
+      <article
+        key={project.slug}
+        className="flex min-w-0 flex-[1_1_440px] flex-col overflow-hidden rounded-[14px] border border-[#E4E4E0] bg-white"
+      >
+        {/* Capture */}
+        <div className="relative aspect-video border-b border-[#E4E4E0] bg-[#ECECE7]">
+          <Image
+            src={project.image}
+            alt={project.imageAlt}
+            fill
+            sizes="(min-width: 1024px) 540px, 100vw"
+            className="object-cover object-top"
+          />
+        </div>
 
-            <span className="text-slate-500  transition-colors duration-300 font-bold">
-              {label}
-            </span>
-          </CardFooter>
-        </Card>
-      ))}
-    </div>
-  );
-};
+        {/* Texte */}
+        <div className="flex flex-grow flex-col gap-3.5 p-7">
+          <p className="font-mono text-xs tracking-[0.06em] text-[#6A707C]">
+            {project.category.toUpperCase()}
+          </p>
+          <h3 className="text-2xl font-semibold tracking-tight text-[#15171C]">{project.title}</h3>
+          <p className="text-base leading-relaxed text-[#3D424D]">{project.pitch}</p>
+          <p className="text-[15px] leading-relaxed text-[#3D424D]">
+            <strong className="font-semibold text-[#15171C]">Mon rôle : </strong>
+            {project.role}
+          </p>
+
+          {/* Liens */}
+          <div className="mt-auto flex flex-wrap gap-4 pt-2 text-[15px] font-medium">
+            <Link
+              href={`/projects/${project.slug}`}
+              className="text-[#1E3FB4] hover:text-[#142C82] hover:underline"
+            >
+              Lire l&apos;étude de cas →
+            </Link>
+            {project.externalLink ? (
+              <a
+                href={project.externalLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#3D424D] hover:text-[#15171C] hover:underline"
+              >
+                {project.externalLink.label} ↗
+              </a>
+            ) : (
+              <span className="font-normal text-[#6A707C]">Code propriétaire</span>
+            )}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+);
 
 export default AllProject;

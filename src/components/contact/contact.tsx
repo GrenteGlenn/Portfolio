@@ -1,137 +1,43 @@
-"use client";
-import { FC, useState } from "react";
-import emailjs from "emailjs-com";
-import { usePathname } from "next/navigation";
+import { FC } from "react";
 
-const Contact: FC = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+const links = [
+  { label: "LinkedIn ↗", href: "https://www.linkedin.com/in/glenn-grente/", external: true },
+  { label: "GitHub ↗", href: "https://github.com/GrenteGlenn", external: true },
+  { label: "CV en PDF", href: "/images/Cv.pdf", external: false },
+];
 
-  const [sending, setSending] = useState(false);
-  const [success, setSuccess] = useState<boolean | null>(null);
-  const pathname = usePathname();
-  const isHomePage = pathname === "/home";
+const Contact: FC = () => (
+  <div className="flex flex-col gap-7">
+    <p className="font-mono text-[13px] tracking-[0.08em] text-[#6A707C]">04 — CONTACT</p>
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+    <h2 className="max-w-[820px] text-4xl font-semibold leading-[1.08] tracking-tight text-[#15171C] sm:text-[52px]">
+      Je cherche un CDI de développeur full stack.
+    </h2>
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    setSuccess(null);
+    <p className="max-w-[620px] text-[19px] leading-relaxed text-[#3D424D]">
+      Vous recrutez sur une stack TypeScript, React ou Angular ? Écrivez-moi directement.
+    </p>
 
-    emailjs
-      .send(
-        "service_xd4s1vf",
-        "template_z8flvsj",
-        {
-          from_name: form.name,
-          from_email: form.email,
-          message: form.message,
-        },
-        "WdcddPmaw6Z9AACtO"
-      )
-      .then(
-        () => {
-          setSending(false);
-          setSuccess(true);
-          setForm({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          console.error("EmailJS Error:", error);
-          setSending(false);
-          setSuccess(false);
-        }
-      );
-  };
+    <div className="flex flex-wrap gap-3 pt-2">
+      <a
+        href="mailto:grenteglennpro@gmail.com"
+        className="inline-flex min-h-12 items-center rounded-xl bg-[#15171C] px-[22px] text-[15px] font-medium text-white transition-colors hover:bg-[#3D424D]"
+      >
+        grenteglennpro@gmail.com
+      </a>
 
-  return (
-    <section id="contact">
-      <div className="max-w-3xl rounded-xl p-8">
-        <form onSubmit={handleSubmit} className="space-y-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium text-black mb-1">
-                Nom
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Entrer votre nom"
-                value={form.name}
-                onChange={handleChange}
-                required
-                className={`w-full border-b ${
-                  isHomePage ? "bg-[#FAF3E0]" : "bg-white"
-                } border-blue-500 focus:outline-none focus:border-blue-500 transition`}
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-black mb-1">
-                Adresse Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Entrer votre adresse email"
-                value={form.email}
-                onChange={handleChange}
-                required
-                className={`w-full border-b ${
-                  isHomePage ? "bg-[#FAF3E0]" : "bg-white"
-                } border-blue-500 focus:outline-none focus:border-blue-500 transition`}
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-black mb-1">
-              Message
-            </label>
-            <textarea
-              name="message"
-              rows={5}
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Entrer votre message"
-              required
-              className={`w-full border-b ${
-                isHomePage ? "bg-[#FAF3E0]" : "bg-white"
-              } border-blue-500 focus:outline-none focus:border-blue-500 transition`}
-            />
-          </div>
-
-          <div className="text-center">
-            <button
-              type="submit"
-              disabled={sending}
-              className="px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition disabled:opacity-50"
-            >
-              {sending ? "Envoi..." : "Envoyer"}
-            </button>
-          </div>
-
-          {success === true && (
-            <p className="text-green-600 text-center">
-              Message envoyé avec succès !
-            </p>
-          )}
-          {success === false && (
-            <p className="text-red-600 text-center">
-              Échec de l&apos;envoi. Réessayez plus tard.
-            </p>
-          )}
-        </form>
-      </div>
-    </section>
-  );
-};
+      {links.map((link) => (
+        <a
+          key={link.label}
+          href={link.href}
+          {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : { download: true })}
+          className="inline-flex min-h-12 items-center rounded-xl border border-[#CFCFC9] px-[22px] text-[15px] font-medium text-[#15171C] transition-colors hover:border-[#15171C]"
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+);
 
 export default Contact;

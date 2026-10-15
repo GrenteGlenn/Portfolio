@@ -1,148 +1,56 @@
-"use client";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
-import Contact from "../contact/contact";
-import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
-import Image from "next/image";
+import CaseStudy from "./caseStudy";
 
-const images = [
-  "/images/wonders/homepage.png",
-  "/images/wonders/choiceGuide.png",
-  "/images/wonders/question.png",
-  "/images/wonders/questionResult.png",
-  "/images/wonders/step1.png",
-  "/images/wonders/step2.png",
-  "/images/wonders/step3.png",
-  "/images/wonders/step4.png",
-  "/images/wonders/step5.png",
-  "/images/wonders/forum1.png",
-  "/images/wonders/forum2.png",
-];
-
-const Wonders = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrev = () =>
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  const handleNext = () =>
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-
-  return (
-    <div className="flex flex-col items-center justify-center px-4 sm:px-6 space-y-12 py-16 sm:py-20">
-      {/* Carrousel responsive */}
-      <div className="relative w-full max-w-7xl">
-        <div className="w-full aspect-[16/9] sm:aspect-[3/2] lg:aspect-[4/2] overflow-hidden border border-cyan-400 shadow-lg rounded-xl bg-white flex items-center justify-center">
-          <Zoom>
-            {images[currentIndex] ? (
-              <Image
-                src={images[currentIndex]}
-                alt={`Slide ${currentIndex}`}
-                width={1400}
-                height={600}
-              />
-            ) : null}
-          </Zoom>
-        </div>
-
-        {/* Navigation buttons */}
-        <button
-          onClick={handlePrev}
-          className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 bg-white rounded-full p-2 hover:bg-gray-100 shadow"
-        >
-          <ChevronLeft />
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 bg-white rounded-full p-2 hover:bg-gray-100 shadow"
-        >
-          <ChevronRight />
-        </button>
-      </div>
-
-      {/* Dots navigation */}
-      <div className="flex flex-wrap justify-center gap-2 mt-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentIndex(i)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentIndex === i ? "bg-gray-900" : "bg-gray-300"
-            }`}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
-      </div>
-
-      <div className="flex justify-between items-center w-full max-w-7xl px-2 sm:px-4">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold break-words mt-4">
-          Wonders
-        </h2>
-      </div>
-
-      {/* Résumé */}
-      <div className="max-w-4xl text-sm sm:text-base text-gray-700 py-12 sm:py-16 text-justify space-y-8 leading-relaxed px-2">
-        <span className="block">
-          Conception et développement d’une application web complète de
-          planification de voyages, de la définition des préférences utilisateur
-          jusqu’à la réservation et la visualisation d’itinéraires.
-        </span>
-        <span className="block ml-12">
-          • Développement du front-end en Angular 18
-          <br />
-          <br />
-          • Mise en place d’une architecture back-end en microservices Node.js
-          <br />
-          <br />
-          • Intégration d’APIs externes (vols, hôtels, cartes)
-          <br />
-          <br />
-          • Génération de recommandations via l’IA
-          <br />
-          <br />
-          • Gestion d’un moteur de recherche dynamique et filtrable
-          <br />
-          <br />• Développement d’un module communautaire (forum)
-        </span>
-        <span className="block">
-          Stack :
-          <span className="text-slate-900 ml-1">
-            Angular 18 • Node.js • Express • Microservices • API REST • Google
-            Maps
-          </span>
-        </span>
-        <span className="block">
-          Focus :
-          <span className="text-slate-900 ml-1">
-           
-            Architecture • Scalabilité • UX • APIs • IA{" "}
-          </span>
-        </span>
-      </div>
-
-      {/* Séparateur */}
-      <div className="w-full max-w-7xl border-b border-black h-10" />
-
-      {/* Contact section */}
-      <section id="contact" className="w-full max-w-7xl py-20 px-2">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
-          <div className="flex flex-col items-start md:w-1/2 space-y-6">
-            <h2 className="text-blue-500 text-4xl sm:text-5xl font-bold leading-tight">
-              Travaillons <br /> ensemble !
-            </h2>
-            <span className="text-gray-700 text-base sm:text-lg leading-relaxed">
-              Vous aimez mon travail et souhaitez <br />
-              quelque chose de similaire pour votre entreprise ? <br />
-              Bien sûr, mettons-nous au travail !
-            </span>
-          </div>
-          <div className="w-full md:w-1/2">
-            <Contact />
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+const Wonders = () => (
+  <CaseStudy
+    category="Microservices · Projet de Master"
+    title="Wonders : une plateforme de voyage en 6 microservices"
+    subtitle="Projet de fin de Master réalisé à 6 : planifier un voyage de A à Z, de la découverte d'un pays à la réservation et au partage d'itinéraires."
+    meta={[
+      { label: "Rôle", value: "Front Angular et authentification" },
+      { label: "Période", value: "Mai 2024 – Sept. 2025" },
+      { label: "Équipe", value: "6 développeurs" },
+      { label: "Stack", value: "Angular 18, Node.js, Express, TypeScript, PostgreSQL, Docker, GitLab CI" },
+    ]}
+    slides={[
+      { src: "/images/wonders/homepage.png", alt: "Page d'accueil" },
+      { src: "/images/wonders/choiceGuide.png", alt: "Choix du guide de voyage" },
+      { src: "/images/wonders/question.png", alt: "Questionnaire de préférences" },
+      { src: "/images/wonders/questionResult.png", alt: "Résultats du questionnaire" },
+      { src: "/images/wonders/step1.png", alt: "Planification du voyage : étape 1" },
+      { src: "/images/wonders/step2.png", alt: "Planification du voyage : étape 2" },
+      { src: "/images/wonders/step3.png", alt: "Planification du voyage : étape 3" },
+      { src: "/images/wonders/step4.png", alt: "Planification du voyage : étape 4" },
+      { src: "/images/wonders/step5.png", alt: "Planification du voyage : étape 5" },
+      { src: "/images/wonders/forum1.png", alt: "Forum de la communauté" },
+      { src: "/images/wonders/forum2.png", alt: "Discussion dans le forum" },
+    ]}
+    context={
+      <p>
+        Wonders aide un voyageur à préparer son séjour de bout en bout : découvrir un pays, trouver des
+        activités, rechercher vols et hôtels, sauvegarder son itinéraire et échanger avec la communauté. Le
+        projet a été mené à 6, avec une architecture microservices et un workflow d&apos;équipe encadré par la
+        CI et les merge requests.
+      </p>
+    }
+    contributions={[
+      "Développement de nombreux composants du front Angular 18 et refonte UX/UI",
+      "Sauvegarde des voyages : l'utilisateur enregistre et retrouve ses itinéraires",
+      "Intégration de Google Maps, des pages hôtels et du chat",
+      "Signalement de bugs par les utilisateurs depuis l'interface",
+      "Authentification : gestion de l'expiration des tokens JWT et middleware de vérification utilisateur",
+      "Sécurisation des variables d'environnement dans les images Docker",
+    ]}
+    architecture={[
+      "6 microservices Node.js / TypeScript indépendants (users, countries, activities, blog, quiz, fly-hotel), chacun avec sa base PostgreSQL",
+      "Descriptions de pays générées par OpenAI puis mises en cache 29 jours, pour limiter coûts et latence",
+      "CI GitLab par service : lint, tests d'API Bruno sur une vraie base, puis build, à chaque merge request",
+      "Docker Compose en local, Caddy en production avec un sous-domaine et TLS par service",
+    ]}
+    challenge={{ problem: "Développer une plateforme de voyage complète avec une équipe de 6 développeurs, en utilisant une architecture microservices.", solution: "Mise en place de microservices Node.js / TypeScript, intégration front Angular 18, CI GitLab et Docker pour le déploiement." }}
+    learnings="Travail en équipe sur une architecture microservices, intégration front-end et back-end, gestion de la CI/CD et déploiement avec Docker."
+    links={[{ label: "Code source", href: "https://github.com/GrenteGlenn/wonders" }]}
+    next={{ slug: "co2", title: "Calculateur CO₂ · éco-conception" }}
+  />
+);
 
 export default Wonders;
