@@ -1,71 +1,84 @@
 "use client";
-import { useActiveSection } from "@/src/hooks/useActiveSection";
+
 import { FC, useState } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { useActiveSection } from "@/src/hooks/useActiveSection";
+
+// Les ids doivent correspondre exactement aux id des <section> de page.tsx.
+// Défini hors du composant : un tableau recréé à chaque rendu relancerait l'observer en boucle.
+const links = [
+  { id: "Experiences", label: "Expériences" },
+  { id: "Projets", label: "Projets" },
+  // { id: "Competences", label: "Compétences" }, // à activer quand la section existera
+  { id: "Contact", label: "Contact" },
+];
+const sectionIds = links.map((link) => link.id);
 
 const Navbar: FC = () => {
-  const sections = ["Accueil", "A propos", "Experiences", "Projets", "Contact"];
-  const active = useActiveSection(sections);
-
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const active = useActiveSection(sectionIds);
   const pathname = usePathname();
 
-  const projectPages = [
-    "/projects/co2",
-    "/projects/proSeeqle",
-    "/projects/weather",
-    "/projects/wonders",
-    "/projects/humanThings",
-  ];
-
-  const isProjectPage = projectPages.includes(pathname ?? "");
-  const anchorBase = isProjectPage ? "/" : "";
+  // Sur toute autre page que l'accueil, les ancres doivent ramener à "/"
+  const anchorBase = pathname === "/" ? "" : "/";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 px-6 py-6 z-50 transition-colors duration-300 bg-slate-100">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-xl font-semibold text-blue-600">&lt;/&gt;</span>
-          <span className="font-bold text-lg text-neutral-600">Glenn</span>
-        </div>
-
-        {/* Mobile toggle button */}
-        <button
-          className="sm:hidden text-black dark:text-white"
-          onClick={() => setMenuOpen(!menuOpen)}
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#E4E4E0] bg-[#FAFAF8]">
+      <nav className="mx-auto flex max-w-[1120px] flex-wrap items-center justify-between gap-4 px-6 py-[18px]">
+        <Link
+          href={`${anchorBase}#Accueil`}
+          className="text-[17px] font-semibold tracking-tight text-[#15171C]"
         >
-          <Menu />
+          Glenn Grente
+        </Link>
+
+        {/* Bouton du menu mobile */}
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#15171C] hover:bg-[#F1F1EE] md:hidden"
+          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={menuOpen}
+          aria-controls="menu-principal"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
 
-        {/* Navigation links */}
+        {/* Liens */}
         <div
+          id="menu-principal"
           className={`${
             menuOpen ? "flex" : "hidden"
-          } sm:flex flex-col sm:flex-row gap-6 text-md font-medium items-center mt-4 sm:mt-0`}
+          } w-full flex-col gap-2 pb-2 text-[15px] md:flex md:w-auto md:flex-row md:items-center md:gap-7 md:pb-0`}
         >
-          {sections.map((id) => (
-            <Link
-              key={id}
-              href={`${anchorBase}#${id}`}
-              scroll={true}
-              className={`transition-colors duration-300 ${active === id}`}
-            >
-              {id.charAt(0).toUpperCase() + id.slice(1)}
-            </Link>
-          ))}
+          {links.map((link) => {
+            const isActive = active === link.id;
+            return (
+              <Link
+                key={link.id}
+                href={`${anchorBase}#${link.id}`}
+                onClick={() => setMenuOpen(false)}
+                aria-current={isActive ? "true" : undefined}
+                className={`py-2 transition-colors md:py-0 ${
+                  isActive ? "font-medium text-[#15171C]" : "text-[#3D424D] hover:text-[#15171C]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <a
             href="/images/Cv.pdf"
             download
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors text-sm sm:text-md"
+            className="inline-flex min-h-11 items-center justify-center rounded-xl border border-[#15171C] px-[18px] font-medium text-[#15171C] transition-colors hover:bg-[#15171C] hover:text-white"
           >
-            Télécharger CV
+            Télécharger le CV
           </a>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
